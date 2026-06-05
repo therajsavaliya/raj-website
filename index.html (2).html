@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Savaliya — Freelance Digital Solutions | Affordable & Professional</title>
+<meta name="description" content="Raj Savaliya — Freelance Digital Solutions Specialist & EdTech Marketing Expert. Professional websites, branding, apps & digital growth at freelancer prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f7;
+  --bg2: #f3f1ee;
+  --surface: #ffffff;
+  --surface2: #f8f6f3;
+  --border: rgba(30,20,10,0.1);
+  --border2: rgba(30,20,10,0.06);
+  --ink: #1a1208;
+  --ink2: #4a3e2e;
+  --ink3: #8a7a6a;
+  --amber: #e8a020;
+  --amber2: #f0b840;
+  --teal: #0d7377;
+  --teal2: #14a8ad;
+  --coral: #e85d3a;
+  --grad: linear-gradient(135deg, #e8a020 0%, #f0b840 100%);
+  --grad2: linear-gradient(135deg, #0d7377 0%, #14a8ad 100%);
+  --grad3: linear-gradient(135deg, #e8a020, #e85d3a);
+  --shadow: 0 20px 60px rgba(0,0,0,0.08);
+  --radius: 16px;
+  --radius2: 24px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--amber);border-radius:3px}
+
+/* ===== PAGE SYSTEM ===== */
+.page { display:none; }
+.page.active { display:block; }
+
+/* ===== TYPOGRAPHY ===== */
+section { padding: 90px 6%; }
+.section-label {
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:0.75rem;
+}
+.section-label::before {
+  content:'';display:block;width:24px;height:2px;background:var(--teal);
+}
+.section-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:800;line-height:1.1;
+  color:var(--ink);margin-bottom:1rem;
+}
+.section-sub {
+  font-size:1rem;color:var(--ink2);max-width:560px;line-height:1.8;
+}
+.section-header { margin-bottom:3.5rem; }
+
+/* ===== NAV ===== */
+nav {
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:16px 6%;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(250,249,247,0.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2);
+  transition:all 0.4s;
+}
+nav.scrolled {
+  padding:12px 6%;
+  box-shadow:0 4px 20px rgba(0,0,0,0.06);
+}
+.nav-logo {
+  font-family:'Playfair Display',serif;
+  font-weight:900;font-size:1.4rem;
+  color:var(--ink);text-decoration:none;
+  letter-spacing:-0.02em;
+  cursor:pointer;
+}
+.nav-logo span { color:var(--amber); }
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  font-size:0.875rem;font-weight:500;
+  color:var(--ink2);text-decoration:none;
+  transition:color 0.3s;cursor:pointer;
+  padding:4px 0;
+  border-bottom:2px solid transparent;
+  transition:color 0.3s, border-color 0.3s;
+}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a.active{color:var(--teal);border-bottom-color:var(--teal)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-cta{
+  padding:10px 24px;border-radius:50px;
+  background:var(--ink);color:#fff;
+  font-size:0.85rem;font-weight:600;
+  text-decoration:none;transition:all 0.3s;
+  white-space:nowrap;cursor:pointer;
+}
+.nav-cta:hover{background:var(--teal);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.3s}
+.mobile-menu{
+  display:none;position:fixed;top:65px;left:0;right:0;
+  background:var(--surface);border-bottom:1px solid var(--border);
+  padding:1.5rem 6%;z-index:999;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1.2rem}
+.mobile-menu a{color:var(--ink2);text-decoration:none;font-size:1rem;font-weight:500;transition:color 0.3s;cursor:pointer}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--teal)}
+
+/* ===== PAGE HERO (inner pages) ===== */
+.page-hero {
+  padding:130px 6% 60px;
+  background:linear-gradient(160deg, #faf9f7 0%, #f3efe8 60%, #edf5f5 100%);
+  position:relative;overflow:hidden;
+}
+.page-hero::before{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle, rgba(14,115,119,0.06), transparent 70%);
+  pointer-events:none;
+}
+.page-hero-inner{position:relative;z-index:1}
+.page-hero-label{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 16px;border-radius:50px;
+  border:1.5px solid rgba(14,115,119,0.2);
+  background:rgba(14,115,119,0.06);
+  font-size:0.75rem;font-weight:700;color:var(--teal);
+  letter-spacing:0.08em;text-transform:uppercase;
+  margin-bottom:1.25rem;
+}
+.page-hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.2rem,4.5vw,3.5rem);
+  font-weight:900;line-height:1.08;
+  color:var(--ink);margin-bottom:1rem;
+}
+.page-hero h1 em{font-style:italic;color:var(--teal)}
+.page-hero p{font-size:1rem;color:var(--ink2);max-width:580px;line-height:1.85}
+
+/* ===== HERO (home) ===== */
+#page-home #home-section {
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:130px 6% 80px;
+  position:relative;overflow:hidden;
+  background: linear-gradient(160deg, #faf9f7 0%, #f3efe8 60%, #edf5f5 100%);
+}
+.hero-bg-orb {
+  position:absolute;border-radius:50%;pointer-events:none;
+}
+.hero-bg-orb.one {
+  width:600px;height:600px;
+  right:-100px;top:-100px;
+  background:radial-gradient(circle, rgba(14,115,119,0.07) 0%, transparent 70%);
+}
+.hero-bg-orb.two {
+  width:400px;height:400px;
+  left:-80px;bottom:-80px;
+  background:radial-gradient(circle, rgba(232,160,32,0.1) 0%, transparent 70%);
+}
+.hero-grid-pattern {
+  position:absolute;inset:0;
+  background-image: radial-gradient(rgba(14,115,119,0.08) 1px, transparent 1px);
+  background-size:32px 32px;
+  pointer-events:none;
+}
+.hero-layout {
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+  width:100%;max-width:1200px;position:relative;z-index:1;
+}
+.hero-badge {
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 16px;border-radius:50px;
+  border:1.5px solid rgba(14,115,119,0.2);
+  background:rgba(14,115,119,0.06);
+  font-size:0.75rem;font-weight:700;color:var(--teal);
+  letter-spacing:0.08em;text-transform:uppercase;
+  margin-bottom:1.5rem;
+  animation:fadeUp 0.7s ease both;
+}
+.hero-badge .dot {
+  width:7px;height:7px;border-radius:50%;
+  background:var(--teal2);
+  box-shadow:0 0 8px var(--teal2);
+  animation:blink 2s infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+h1.hero-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.8rem,5.5vw,4.5rem);
+  font-weight:900;line-height:1.05;
+  color:var(--ink);
+  margin-bottom:1rem;
+  animation:fadeUp 0.7s 0.1s ease both;
+}
+.hero-title .highlight {
+  color:var(--teal);
+  position:relative;
+  display:inline-block;
+}
+.hero-title .highlight::after {
+  content:'';
+  position:absolute;bottom:-4px;left:0;right:0;height:4px;
+  background:var(--grad);border-radius:2px;
+}
+.hero-sub {
+  font-size:1.1rem;font-weight:500;
+  color:var(--ink2);margin-bottom:0.5rem;
+  animation:fadeUp 0.7s 0.15s ease both;
+}
+.hero-role-badge {
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 14px;border-radius:8px;
+  background:linear-gradient(135deg, rgba(232,160,32,0.12), rgba(232,93,58,0.08));
+  border:1px solid rgba(232,160,32,0.25);
+  font-size:0.8rem;font-weight:600;color:var(--coral);
+  margin-bottom:1.5rem;
+  animation:fadeUp 0.7s 0.2s ease both;
+}
+.hero-desc {
+  font-size:1rem;color:var(--ink2);
+  max-width:520px;margin-bottom:2.5rem;line-height:1.85;
+  animation:fadeUp 0.7s 0.25s ease both;
+}
+.hero-btns {
+  display:flex;gap:1rem;flex-wrap:wrap;
+  animation:fadeUp 0.7s 0.3s ease both;
+  margin-bottom:2.5rem;
+}
+.btn-primary {
+  padding:14px 32px;border-radius:50px;
+  background:var(--teal);color:#fff;
+  font-size:0.95rem;font-weight:700;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:all 0.3s;
+  box-shadow:0 8px 24px rgba(13,115,119,0.3);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary:hover{background:#0a5e62;transform:translateY(-2px);box-shadow:0 12px 32px rgba(13,115,119,0.4)}
+.btn-secondary {
+  padding:14px 32px;border-radius:50px;
+  background:transparent;color:var(--ink);
+  font-size:0.95rem;font-weight:600;
+  text-decoration:none;
+  border:2px solid var(--border);
+  transition:all 0.3s;
+  display:inline-flex;align-items:center;gap:8px;
+  cursor:pointer;
+}
+.btn-secondary:hover{border-color:var(--ink);transform:translateY(-2px)}
+.hero-stats {
+  display:flex;gap:2rem;flex-wrap:wrap;
+  animation:fadeUp 0.7s 0.4s ease both;
+}
+.hero-stat { display:flex;flex-direction:column; }
+.hero-stat-num {
+  font-family:'Playfair Display',serif;
+  font-size:2rem;font-weight:900;color:var(--ink);
+  line-height:1;
+}
+.hero-stat-num span { color:var(--teal); }
+.hero-stat-label {
+  font-size:0.72rem;font-weight:600;color:var(--ink3);
+  text-transform:uppercase;letter-spacing:0.08em;
+}
+.hero-right {
+  position:relative;
+  animation:fadeIn 1s 0.3s ease both;
+}
+.hero-profile-card {
+  background:#ffffff;
+  border:1.5px solid var(--border);
+  border-radius:var(--radius2);
+  padding:2rem;
+  box-shadow:0 32px 80px rgba(0,0,0,0.1);
+  position:relative;
+}
+.hpc-top {
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:1.5rem;
+  padding-bottom:1.5rem;
+  border-bottom:1px solid var(--border2);
+}
+.hpc-avatar {
+  width:60px;height:60px;border-radius:50%;
+  background:linear-gradient(135deg, var(--teal), var(--teal2));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;
+  font-size:1.4rem;font-weight:900;color:#fff;
+  flex-shrink:0;
+}
+.hpc-name { font-weight:700;font-size:1rem;color:var(--ink); }
+.hpc-role { font-size:0.78rem;color:var(--ink3);line-height:1.4; }
+.hpc-available {
+  margin-left:auto;display:flex;align-items:center;gap:5px;
+  font-size:0.72rem;font-weight:700;color:#22c55e;
+}
+.hpc-available::before{
+  content:'';width:7px;height:7px;border-radius:50%;
+  background:#22c55e;box-shadow:0 0 6px #22c55e;
+}
+.services-list-mini {
+  display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;
+  margin-bottom:1.5rem;
+}
+.slm-item {
+  display:flex;align-items:center;gap:8px;
+  padding:9px 12px;border-radius:10px;
+  background:var(--surface2);
+  font-size:0.78rem;font-weight:600;color:var(--ink2);
+  transition:all 0.2s;
+}
+.slm-item:hover{background:rgba(13,115,119,0.08);color:var(--teal)}
+.slm-icon{font-size:1rem}
+.price-highlight-card {
+  background:linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);
+  border-radius:14px;padding:1.25rem 1.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.phc-left {
+  font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.8);
+  line-height:1.5;
+}
+.phc-left strong{display:block;font-size:1rem;color:#fff;font-weight:800;}
+.phc-badge {
+  background:rgba(255,255,255,0.2);
+  border-radius:8px;padding:6px 12px;
+  font-size:0.78rem;font-weight:700;color:#fff;
+  white-space:nowrap;text-align:center;
+}
+.phc-badge span { display:block;font-size:1.2rem;font-weight:900; }
+
+/* ===== USP STRIP ===== */
+.usp-strip {
+  background:var(--teal);
+  padding:16px 6%;
+  overflow:hidden;
+}
+.usp-inner {
+  display:flex;gap:3rem;align-items:center;
+  animation:stripScroll 20s linear infinite;
+  width:max-content;
+}
+@keyframes stripScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.usp-chip {
+  display:flex;align-items:center;gap:8px;
+  white-space:nowrap;
+  font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.9);
+  letter-spacing:0.04em;
+}
+.usp-chip::before{content:'✦';color:var(--amber2);font-size:0.6rem}
+
+/* ===== HOME QUICK NAV ===== */
+.home-quick-nav {
+  padding:70px 6%;
+  background:var(--surface);
+}
+.home-quick-nav .section-header { margin-bottom:2.5rem; }
+.quick-nav-grid {
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;
+}
+.qn-card {
+  background:var(--bg2);border:1.5px solid var(--border2);
+  border-radius:var(--radius2);padding:2rem 1.5rem;
+  text-align:center;cursor:pointer;transition:all 0.35s;
+  text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:0.75rem;
+}
+.qn-card:hover{transform:translateY(-6px);border-color:var(--teal);box-shadow:0 16px 48px rgba(13,115,119,0.12)}
+.qn-icon{font-size:2.2rem}
+.qn-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--ink)}
+.qn-desc{font-size:0.78rem;color:var(--ink3);line-height:1.6}
+.qn-arrow{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(13,115,119,0.08);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.9rem;color:var(--teal);margin-top:auto;
+  transition:background 0.3s,color 0.3s;
+}
+.qn-card:hover .qn-arrow{background:var(--teal);color:#fff}
+
+/* ===== ABOUT ===== */
+.about-section { background:var(--surface); }
+.about-grid {
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;
+}
+.about-text p { color:var(--ink2);line-height:1.85;margin-bottom:1.2rem;font-size:0.98rem; }
+.about-text p:last-of-type{margin-bottom:2rem}
+.about-text strong{color:var(--ink);font-weight:700}
+.edu-badge {
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1.25rem 1.5rem;
+  background:linear-gradient(135deg, rgba(232,160,32,0.08), rgba(232,93,58,0.05));
+  border:1.5px solid rgba(232,160,32,0.2);
+  border-radius:var(--radius);
+  margin-bottom:1.5rem;
+}
+.edu-badge-icon{font-size:2rem;flex-shrink:0;margin-top:2px}
+.edu-badge-text h4{font-weight:700;font-size:0.95rem;color:var(--ink);margin-bottom:4px}
+.edu-badge-text p{font-size:0.82rem;color:var(--ink2);line-height:1.6;margin:0}
+.skills-grid {
+  display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;
+}
+.skill-pill {
+  padding:6px 14px;border-radius:50px;
+  background:var(--bg2);
+  border:1px solid var(--border);
+  font-size:0.78rem;font-weight:600;color:var(--ink2);
+  transition:all 0.2s;
+}
+.skill-pill:hover{background:rgba(13,115,119,0.08);border-color:var(--teal);color:var(--teal)}
+.about-right { display:flex;flex-direction:column;gap:1rem; }
+.about-image-block {
+  border-radius:var(--radius2);overflow:hidden;
+  position:relative;
+  background:linear-gradient(135deg, #e8f5f5, #f0ebe0);
+  padding:2.5rem;
+  border:1.5px solid var(--border);
+}
+.about-illustration {
+  display:grid;grid-template-columns:1fr 1fr;gap:1rem;
+}
+.ai-card {
+  background:#ffffff;border-radius:14px;
+  padding:1.25rem;
+  border:1px solid var(--border2);
+  box-shadow:0 4px 16px rgba(0,0,0,0.06);
+  transition:transform 0.3s;
+}
+.ai-card:hover{transform:translateY(-4px)}
+.ai-card .ai-icon{font-size:1.8rem;margin-bottom:0.5rem}
+.ai-card h5{font-size:0.82rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.ai-card p{font-size:0.73rem;color:var(--ink3);line-height:1.5}
+.ai-card.full{grid-column:1/-1}
+.about-quote {
+  background:var(--teal);
+  border-radius:var(--radius);
+  padding:1.5rem 2rem;
+  position:relative;
+}
+.about-quote::before{
+  content:'"';
+  position:absolute;top:-10px;left:20px;
+  font-family:'Playfair Display',serif;
+  font-size:5rem;color:rgba(255,255,255,0.15);
+  line-height:1;
+}
+.about-quote p{font-size:0.92rem;color:rgba(255,255,255,0.9);line-height:1.7;font-style:italic}
+.about-quote cite{display:block;font-size:0.75rem;color:rgba(255,255,255,0.6);margin-top:0.75rem;font-style:normal;font-weight:600}
+
+/* ===== WHY WORK ===== */
+.why-section { background:var(--bg2); }
+.why-grid {
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1.25rem;
+}
+.why-card {
+  background:var(--surface);
+  border:1.5px solid var(--border2);
+  border-radius:var(--radius);
+  padding:1.5rem;
+  transition:all 0.3s;
+}
+.why-card:hover {
+  transform:translateY(-4px);
+  border-color:var(--teal);
+  box-shadow:0 12px 32px rgba(13,115,119,0.1);
+}
+.why-icon{font-size:1.8rem;margin-bottom:0.75rem}
+.why-card h4{font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.4rem}
+.why-card p{font-size:0.8rem;color:var(--ink3);line-height:1.6}
+
+/* ===== SERVICES ===== */
+.services-section { background:var(--bg2); }
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+.service-card {
+  background:var(--surface);
+  border:1.5px solid var(--border2);
+  border-radius:var(--radius2);
+  padding:2rem;
+  transition:all 0.35s;
+  position:relative;
+  overflow:hidden;
+}
+.service-card::before {
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--grad2);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s;
+}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover {
+  box-shadow:0 20px 50px rgba(0,0,0,0.1);
+  transform:translateY(-4px);
+  border-color:rgba(13,115,119,0.2);
+}
+.service-card.featured {
+  background:linear-gradient(135deg, var(--teal) 0%, #0a5e62 100%);
+  border-color:transparent;
+  color:#fff;
+}
+.service-card.featured .service-icon { background:rgba(255,255,255,0.15); }
+.service-card.featured .service-title { color:#fff; }
+.service-card.featured .service-items li { color:rgba(255,255,255,0.8); border-color:rgba(255,255,255,0.1); }
+.service-card.featured .service-items li::before { color:rgba(255,255,255,0.5); }
+.service-card.featured .service-desc { color:rgba(255,255,255,0.7); }
+.service-icon {
+  width:52px;height:52px;border-radius:14px;
+  background:rgba(13,115,119,0.08);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;
+  margin-bottom:1.25rem;
+  transition:transform 0.3s;
+}
+.service-card:hover .service-icon{transform:scale(1.1) rotate(-5deg)}
+.service-title {
+  font-family:'Playfair Display',serif;
+  font-weight:700;font-size:1.15rem;color:var(--ink);
+  margin-bottom:0.5rem;
+}
+.service-desc{font-size:0.82rem;color:var(--ink3);margin-bottom:1rem;line-height:1.6;}
+.service-items {
+  list-style:none;display:flex;flex-direction:column;gap:0.5rem;
+}
+.service-items li {
+  font-size:0.82rem;color:var(--ink2);
+  display:flex;align-items:center;gap:8px;
+  padding-bottom:0.5rem;
+  border-bottom:1px solid var(--border2);
+}
+.service-items li:last-child{border-bottom:none;padding-bottom:0}
+.service-items li::before{content:'→';color:var(--teal);font-size:0.7rem;flex-shrink:0}
+.service-price-hint {
+  margin-top:1.25rem;
+  padding:0.6rem 1rem;
+  background:rgba(13,115,119,0.06);
+  border:1px dashed rgba(13,115,119,0.2);
+  border-radius:8px;
+  font-size:0.75rem;font-weight:700;color:var(--teal);
+  display:flex;align-items:center;gap:6px;
+}
+.service-card.featured .service-price-hint{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.9)}
+
+/* ===== PROCESS ===== */
+.process-section { background:var(--surface); }
+.process-steps {
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:0;position:relative;margin-top:1rem;
+}
+.process-steps::before {
+  content:'';position:absolute;
+  top:23px;left:calc(10%);right:calc(10%);
+  height:1px;
+  background:linear-gradient(90deg, var(--teal), var(--amber));
+  z-index:0;
+}
+.step {
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;padding:0 0.75rem;position:relative;z-index:1;
+}
+.step-num {
+  width:46px;height:46px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-weight:900;font-size:0.85rem;color:var(--teal);
+  margin-bottom:1.25rem;
+  transition:all 0.3s;
+}
+.step:hover .step-num{background:var(--teal);color:#fff}
+.step h4{font-size:0.82rem;font-weight:700;color:var(--ink);margin-bottom:0.4rem;line-height:1.3}
+.step p{font-size:0.73rem;color:var(--ink3);line-height:1.5}
+
+/* ===== PRICING ===== */
+.pricing-section {
+  background:var(--ink);
+  padding:80px 6%;
+}
+.pricing-usp-grid {
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;
+}
+.pricing-usp-text .section-label{color:var(--amber2)}
+.pricing-usp-text .section-label::before{background:var(--amber2)}
+.pricing-usp-text .section-title{color:#fff}
+.pricing-usp-text p{color:rgba(255,255,255,0.65);font-size:0.98rem;line-height:1.85;margin-bottom:1.5rem}
+.why-cheaper-list{
+  display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;
+}
+.wc-item {
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1rem 1.25rem;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:12px;
+  transition:all 0.3s;
+}
+.wc-item:hover{background:rgba(255,255,255,0.07);border-color:rgba(232,160,32,0.2)}
+.wc-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.wc-item h5{font-size:0.9rem;font-weight:700;color:#fff;margin-bottom:3px}
+.wc-item p{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5;margin:0}
+.comparison-card {
+  background:rgba(255,255,255,0.03);
+  border:1.5px solid rgba(255,255,255,0.08);
+  border-radius:var(--radius2);
+  overflow:hidden;
+}
+.comparison-header {
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  background:rgba(255,255,255,0.05);
+  padding:1rem 1.5rem;
+  font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.5);
+  text-transform:uppercase;letter-spacing:0.08em;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.comparison-header .col-raj{color:var(--amber2)}
+.comparison-row {
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  padding:1rem 1.5rem;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  align-items:center;
+  transition:background 0.2s;
+}
+.comparison-row:hover{background:rgba(255,255,255,0.02)}
+.comparison-row:last-child{border-bottom:none}
+.cr-label{font-size:0.85rem;color:rgba(255,255,255,0.7);font-weight:500}
+.cr-agency{font-size:0.85rem;color:rgba(255,255,255,0.35);text-align:center}
+.cr-raj{font-size:0.85rem;font-weight:700;color:var(--amber2);text-align:center}
+.comparison-cta {
+  padding:1.25rem 1.5rem;
+  background:linear-gradient(135deg, rgba(232,160,32,0.15), rgba(232,160,32,0.05));
+  border-top:1px solid rgba(232,160,32,0.15);
+  text-align:center;
+}
+.comparison-cta p{font-size:0.82rem;color:rgba(255,255,255,0.6);margin-bottom:0.5rem}
+.comparison-cta strong{color:var(--amber2);font-size:0.95rem}
+
+/* FAQ Section within Pricing page */
+.faq-section { background:var(--surface); }
+.faq-grid{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:0.75rem}
+.faq-item{
+  background:var(--bg2);border:1.5px solid var(--border2);
+  border-radius:var(--radius);overflow:hidden;transition:all 0.3s;
+}
+.faq-item.open{border-color:var(--teal);box-shadow:0 4px 20px rgba(13,115,119,0.08)}
+.faq-q{
+  padding:1.25rem 1.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;
+  font-weight:600;font-size:0.92rem;color:var(--ink);
+  transition:color 0.3s;
+}
+.faq-q:hover{color:var(--teal)}
+.faq-icon{
+  width:28px;height:28px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;transition:all 0.3s;flex-shrink:0;color:var(--ink3);
+}
+.faq-item.open .faq-icon{background:var(--teal);color:#fff;border-color:var(--teal);transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  padding:0 1.5rem;
+  font-size:0.88rem;color:var(--ink2);line-height:1.85;
+  transition:max-height 0.4s ease,padding 0.3s;
+  background:var(--surface);
+}
+.faq-item.open .faq-a{max-height:200px;padding:0 1.5rem 1.25rem}
+
+/* ===== EDTECH ===== */
+.edtech-section {
+  background:linear-gradient(160deg, #f0f8f8 0%, #faf9f7 100%);
+  position:relative;overflow:hidden;
+}
+.edtech-section::before{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle, rgba(13,115,119,0.06), transparent 70%);
+  pointer-events:none;
+}
+.edtech-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;
+}
+.edtech-label{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:5px 14px;border-radius:50px;
+  background:rgba(232,160,32,0.1);
+  border:1px solid rgba(232,160,32,0.25);
+  font-size:0.72rem;font-weight:700;color:var(--amber);
+  text-transform:uppercase;letter-spacing:0.1em;
+  margin-bottom:1rem;
+}
+.edtech-expertise{
+  display:grid;grid-template-columns:1fr 1fr;gap:1rem;
+  margin-top:2rem;
+}
+.ee-item{
+  padding:1.25rem;
+  background:var(--surface);
+  border:1.5px solid var(--border2);
+  border-radius:var(--radius);
+  transition:all 0.3s;
+}
+.ee-item:hover{border-color:var(--amber);box-shadow:0 8px 24px rgba(232,160,32,0.1)}
+.ee-icon{font-size:1.5rem;margin-bottom:0.5rem}
+.ee-item h5{font-size:0.85rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.ee-item p{font-size:0.75rem;color:var(--ink3);line-height:1.5}
+.edtech-right{position:relative}
+.edtech-visual {
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius2);
+  padding:2rem;
+  box-shadow:0 20px 60px rgba(0,0,0,0.07);
+}
+.edtech-metric {
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 0;
+  border-bottom:1px solid var(--border2);
+}
+.edtech-metric:last-child{border-bottom:none}
+.em-label{font-size:0.82rem;color:var(--ink2);font-weight:500}
+.em-bar-wrap{flex:1;margin:0 1rem;height:6px;background:var(--bg2);border-radius:3px;overflow:hidden}
+.em-bar{height:100%;border-radius:3px;background:var(--grad2);}
+.em-val{font-size:0.82rem;font-weight:700;color:var(--teal);white-space:nowrap}
+.edtech-cta-bar{
+  margin-top:1.5rem;
+  padding:1rem 1.25rem;
+  background:linear-gradient(135deg, rgba(232,160,32,0.1), rgba(232,93,58,0.07));
+  border-radius:12px;
+  border:1px solid rgba(232,160,32,0.2);
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  flex-wrap:wrap;
+}
+.edtech-cta-bar p{font-size:0.82rem;color:var(--ink2);font-weight:500}
+.edtech-cta-bar strong{color:var(--ink);display:block;font-size:0.9rem}
+
+/* ===== CONTACT ===== */
+.contact-section { background:var(--bg2); }
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:1.25rem}
+.contact-headline{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  font-weight:800;line-height:1.15;margin-bottom:0.75rem;color:var(--ink);
+}
+.contact-desc{color:var(--ink2);line-height:1.8;font-size:0.95rem;margin-bottom:1.5rem}
+.contact-item{
+  display:flex;align-items:center;gap:1rem;
+  padding:1rem 1.25rem;
+  background:var(--surface);border:1.5px solid var(--border2);
+  border-radius:var(--radius);transition:all 0.3s;
+  text-decoration:none;color:var(--ink);
+}
+.contact-item:hover{border-color:var(--teal);transform:translateX(4px);box-shadow:0 4px 16px rgba(13,115,119,0.08)}
+.ci-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:rgba(13,115,119,0.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;flex-shrink:0;
+}
+.ci-label{font-size:0.68rem;color:var(--ink3);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:2px;font-weight:600}
+.ci-val{font-size:0.88rem;font-weight:600;color:var(--ink)}
+.contact-form{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--radius2);padding:2.5rem;
+  box-shadow:0 8px 40px rgba(0,0,0,0.06);
+}
+.form-group{margin-bottom:1.25rem}
+.form-group label{
+  display:block;font-size:0.78rem;font-weight:700;
+  color:var(--ink2);margin-bottom:0.5rem;letter-spacing:0.03em;
+}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;padding:12px 16px;
+  background:var(--bg2);border:1.5px solid var(--border);
+  border-radius:10px;color:var(--ink);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;
+  transition:all 0.3s;outline:none;
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+  border-color:var(--teal);
+  box-shadow:0 0 0 3px rgba(13,115,119,0.1);
+  background:var(--surface);
+}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit{
+  width:100%;padding:14px;border-radius:50px;
+  background:var(--teal);color:#fff;
+  font-size:0.95rem;font-weight:700;
+  border:none;cursor:pointer;transition:all 0.3s;
+  font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:0.02em;
+}
+.form-submit:hover{background:#0a5e62;transform:translateY(-2px);box-shadow:0 12px 32px rgba(13,115,119,0.3)}
+.form-note{font-size:0.72rem;color:var(--ink3);text-align:center;margin-top:1rem}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--ink);
+  padding:3.5rem 6% 2rem;
+}
+.footer-content{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  flex-wrap:wrap;gap:2rem;margin-bottom:2.5rem;
+  padding-bottom:2.5rem;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.footer-brand .nav-logo{color:#fff;display:block;margin-bottom:0.5rem;font-size:1.5rem}
+.footer-brand .nav-logo span{color:var(--amber2)}
+.footer-brand p{font-size:0.82rem;color:rgba(255,255,255,0.4);max-width:220px;line-height:1.6}
+.footer-links{display:flex;gap:1.75rem;flex-wrap:wrap;align-items:center}
+.footer-links a{
+  font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;
+  transition:color 0.3s;cursor:pointer;
+}
+.footer-links a:hover{color:var(--amber2)}
+.footer-social{display:flex;gap:0.75rem}
+.footer-social a{
+  width:38px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:1rem;transition:all 0.3s;
+}
+.footer-social a:hover{background:rgba(232,160,32,0.15);border-color:rgba(232,160,32,0.3)}
+.footer-copy{text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.25);}
+.footer-copy span{color:var(--amber2)}
+
+/* ===== WHATSAPP ===== */
+.wa-btn{
+  position:fixed;bottom:28px;right:28px;z-index:999;
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
+  box-shadow:0 8px 24px rgba(37,211,102,0.4);
+  transition:all 0.3s;
+  animation:waPulse 3s 2s infinite;
+}
+.wa-btn:hover{transform:scale(1.08);box-shadow:0 12px 32px rgba(37,211,102,0.5)}
+.wa-btn svg{width:26px;height:26px;fill:#fff}
+@keyframes waPulse{0%,100%{box-shadow:0 8px 24px rgba(37,211,102,0.4)}50%{box-shadow:0 8px 24px rgba(37,211,102,0.4),0 0 0 12px rgba(37,211,102,0.07)}}
+.wa-tooltip{
+  position:absolute;right:66px;white-space:nowrap;
+  background:var(--surface);border:1px solid var(--border);
+  color:var(--ink);font-size:0.75rem;font-weight:500;
+  padding:6px 14px;border-radius:8px;
+  opacity:0;pointer-events:none;transition:opacity 0.3s;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.wa-btn:hover .wa-tooltip{opacity:1}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{opacity:0;transform:translateY(24px);transition:all 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.1s}.reveal-d2{transition-delay:0.2s}.reveal-d3{transition-delay:0.3s}.reveal-d4{transition-delay:0.4s}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px) scale(0.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1100px){
+  .hero-layout{grid-template-columns:1fr;gap:3rem}
+  .hero-right{display:none}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .edtech-grid{grid-template-columns:1fr;gap:3rem}
+  .pricing-usp-grid{grid-template-columns:1fr;gap:3rem}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr 1fr 1fr;gap:2rem}
+  .process-steps::before{display:none}
+  .contact-grid{grid-template-columns:1fr}
+  .quick-nav-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  section{padding:70px 5%}
+  #page-home #home-section{padding:110px 5% 60px}
+  .page-hero{padding:110px 5% 50px}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .hero-stats{gap:1.5rem}
+  .edtech-expertise{grid-template-columns:1fr}
+  .footer-content{flex-direction:column;gap:1.5rem}
+  .comparison-header,.comparison-row{grid-template-columns:1.5fr 1fr 1fr;gap:0.5rem}
+  .quick-nav-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .why-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .btn-primary,.btn-secondary{text-align:center;justify-content:center}
+  .form-row{grid-template-columns:1fr}
+  .services-list-mini{grid-template-columns:1fr}
+  .hero-stats{gap:1rem}
+  .about-illustration{grid-template-columns:1fr}
+  .quick-nav-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" onclick="navigate('home')">Raj<span>.</span></a>
+  <ul class="nav-links">
+    <li><a onclick="navigate('home')" data-page="home">Home</a></li>
+    <li><a onclick="navigate('about')" data-page="about">About</a></li>
+    <li><a onclick="navigate('services')" data-page="services">Services</a></li>
+    <li><a onclick="navigate('pricing')" data-page="pricing">Pricing</a></li>
+    <li><a onclick="navigate('edtech')" data-page="edtech">EdTech</a></li>
+    <li><a onclick="navigate('contact')" data-page="contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="nav-cta" onclick="navigate('contact')">Let's Talk →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a onclick="navigate('home');closeMobile()" data-page="home">Home</a></li>
+    <li><a onclick="navigate('about');closeMobile()" data-page="about">About</a></li>
+    <li><a onclick="navigate('services');closeMobile()" data-page="services">Services</a></li>
+    <li><a onclick="navigate('pricing');closeMobile()" data-page="pricing">Pricing</a></li>
+    <li><a onclick="navigate('edtech');closeMobile()" data-page="edtech">EdTech</a></li>
+    <li><a onclick="navigate('contact');closeMobile()" data-page="contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ===================== PAGE: HOME ===================== -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section id="home-section">
+    <div class="hero-bg-orb one"></div>
+    <div class="hero-bg-orb two"></div>
+    <div class="hero-grid-pattern"></div>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Available for New Projects
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm<br><span class="highlight">Raj Savaliya</span>
+        </h1>
+        <p class="hero-sub">Freelance Digital Solutions Specialist</p>
+        <div class="hero-role-badge">
+          🎓 Operations & Marketing Manager — EdTech Industry
+        </div>
+        <p class="hero-desc">
+          I help startups, businesses, and entrepreneurs establish a powerful digital presence — through modern websites, sharp branding, mobile apps, and AI-powered solutions. <strong>Freelancer pricing. Agency quality.</strong>
+        </p>
+        <div class="hero-btns">
+          <a class="btn-primary" onclick="navigate('contact')">✉ Let's Work Together</a>
+          <a class="btn-secondary" onclick="navigate('services')">↓ View Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">7<span>+</span></div>
+            <div class="hero-stat-label">Services</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num" style="color:var(--teal)">50<span>%</span></div>
+            <div class="hero-stat-label">Less Than Agencies</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">24<span>h</span></div>
+            <div class="hero-stat-label">Response Time</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-profile-card">
+          <div class="hpc-top">
+            <div class="hpc-avatar">RS</div>
+            <div>
+              <div class="hpc-name">Raj Savaliya</div>
+              <div class="hpc-role">Digital Solutions Specialist<br>EdTech Marketing Manager</div>
+            </div>
+            <div class="hpc-available">Available</div>
+          </div>
+          <div class="services-list-mini">
+            <div class="slm-item"><span class="slm-icon">🌐</span>Web Dev</div>
+            <div class="slm-item"><span class="slm-icon">✦</span>Branding</div>
+            <div class="slm-item"><span class="slm-icon">📱</span>Android Apps</div>
+            <div class="slm-item"><span class="slm-icon">🤖</span>AI Solutions</div>
+            <div class="slm-item"><span class="slm-icon">🎨</span>Graphic Design</div>
+            <div class="slm-item"><span class="slm-icon">📈</span>Digital Growth</div>
+          </div>
+          <div class="price-highlight-card">
+            <div class="phc-left">
+              <strong>Freelancer Advantage</strong>
+              No office. No middlemen.<br>Savings passed to you.
+            </div>
+            <div class="phc-badge">
+              <span>↓50%</span>
+              vs Agency
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP STRIP -->
+  <div class="usp-strip">
+    <div class="usp-inner">
+      <div class="usp-chip">No Agency Overhead</div>
+      <div class="usp-chip">Direct Communication</div>
+      <div class="usp-chip">Freelancer Pricing</div>
+      <div class="usp-chip">EdTech Experience</div>
+      <div class="usp-chip">AI-Powered Solutions</div>
+      <div class="usp-chip">Mobile-First Design</div>
+      <div class="usp-chip">24h Response</div>
+      <div class="usp-chip">Premium Quality</div>
+      <div class="usp-chip">No Agency Overhead</div>
+      <div class="usp-chip">Direct Communication</div>
+      <div class="usp-chip">Freelancer Pricing</div>
+      <div class="usp-chip">EdTech Experience</div>
+      <div class="usp-chip">AI-Powered Solutions</div>
+      <div class="usp-chip">Mobile-First Design</div>
+      <div class="usp-chip">24h Response</div>
+      <div class="usp-chip">Premium Quality</div>
+    </div>
+  </div>
+
+  <!-- QUICK NAVIGATION CARDS -->
+  <section class="home-quick-nav">
+    <div class="section-header">
+      <div class="section-label">Explore</div>
+      <h2 class="section-title">What Would You Like to Know?</h2>
+      <p class="section-sub">Navigate directly to what matters most to you.</p>
+    </div>
+    <div class="quick-nav-grid">
+      <a class="qn-card" onclick="navigate('about')">
+        <div class="qn-icon">👤</div>
+        <div class="qn-title">About Me</div>
+        <div class="qn-desc">My background, skills, experience, and what makes me different from an agency.</div>
+        <div class="qn-arrow">→</div>
+      </a>
+      <a class="qn-card" onclick="navigate('services')">
+        <div class="qn-icon">🛠️</div>
+        <div class="qn-title">Services</div>
+        <div class="qn-desc">From web development and branding to AI solutions — see everything I offer.</div>
+        <div class="qn-arrow">→</div>
+      </a>
+      <a class="qn-card" onclick="navigate('pricing')">
+        <div class="qn-icon">💰</div>
+        <div class="qn-title">Pricing</div>
+        <div class="qn-desc">Why my rates beat agencies — with transparent comparisons and no hidden costs.</div>
+        <div class="qn-arrow">→</div>
+      </a>
+      <a class="qn-card" onclick="navigate('edtech')">
+        <div class="qn-icon">🎓</div>
+        <div class="qn-title">EdTech Work</div>
+        <div class="qn-desc">My real-world experience managing operations and marketing at an EdTech company.</div>
+        <div class="qn-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a class="nav-logo" onclick="navigate('home')">Raj<span>.</span></a>
+        <p>Freelance Digital Solutions Specialist & EdTech Marketing Manager</p>
+      </div>
+      <div class="footer-links">
+        <a onclick="navigate('home')">Home</a>
+        <a onclick="navigate('about')">About</a>
+        <a onclick="navigate('services')">Services</a>
+        <a onclick="navigate('pricing')">Pricing</a>
+        <a onclick="navigate('edtech')">EdTech</a>
+        <a onclick="navigate('contact')">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:the.rajsavaliya@gmail.com" title="Email">✉</a>
+        <a href="https://linkedin.com/in/raj-savaliya" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://wa.me/916354297641" target="_blank" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2026 <span>Raj Savaliya</span> · Freelance Digital Solutions Specialist · Made with ❤ in India
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: ABOUT ===================== -->
+<div id="page-about" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">About Me</div>
+      <h1>Building Digital Presence<br>That <em>Actually Works</em></h1>
+      <p>I'm Raj Savaliya — a Freelance Digital Solutions Specialist with hands-on experience in web, branding, apps, and AI. I bring EdTech marketing expertise and freelancer efficiency to every project.</p>
+    </div>
+  </div>
+
+  <!-- ABOUT STORY -->
+  <section class="about-section">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-label">My Story</div>
+        <h2 class="section-title">Who I Am & What I Do</h2>
+        <p>I'm <strong>Raj Savaliya</strong>, a Freelance Digital Solutions Specialist with hands-on experience building digital products for businesses of all sizes. My work spans websites, branding, mobile apps, and AI-powered tools.</p>
+        <p>I believe every business deserves a <strong>strong digital identity</strong> — and that quality shouldn't require an agency budget. Working directly with me means zero middlemen, full focus on your project, and pricing that reflects freelance efficiency.</p>
+
+        <div class="edu-badge">
+          <div class="edu-badge-icon">🎓</div>
+          <div class="edu-badge-text">
+            <h4>Operations & Marketing Manager — EdTech</h4>
+            <p>Professionally managing operations and marketing for an EdTech company, bringing hands-on experience in digital campaigns, student acquisition funnels, content strategy, and brand communication.</p>
+          </div>
+        </div>
+
+        <p>This dual experience — running marketing for an EdTech organization while building digital products as a freelancer — gives me a uniquely practical perspective on what truly drives <strong>growth, engagement, and conversion</strong> online.</p>
+
+        <div class="skills-grid">
+          <span class="skill-pill">HTML / CSS</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">React</span>
+          <span class="skill-pill">Android / Kotlin</span>
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">Adobe Illustrator</span>
+          <span class="skill-pill">Photoshop</span>
+          <span class="skill-pill">AI Tools</span>
+          <span class="skill-pill">WordPress</span>
+          <span class="skill-pill">SEO Basics</span>
+          <span class="skill-pill">Digital Marketing</span>
+          <span class="skill-pill">Canva Pro</span>
+        </div>
+      </div>
+      <div class="about-right reveal reveal-d2">
+        <div class="about-image-block">
+          <div class="about-illustration">
+            <div class="ai-card">
+              <div class="ai-icon">🌐</div>
+              <h5>Web Development</h5>
+              <p>Modern, fast, and responsive websites built for results</p>
+            </div>
+            <div class="ai-card">
+              <div class="ai-icon">✦</div>
+              <h5>Creative Design</h5>
+              <p>Visual identities that stand out and communicate</p>
+            </div>
+            <div class="ai-card">
+              <div class="ai-icon">📱</div>
+              <h5>Mobile Apps</h5>
+              <p>Custom Android apps built for your needs</p>
+            </div>
+            <div class="ai-card">
+              <div class="ai-icon">🤖</div>
+              <h5>AI Solutions</h5>
+              <p>Chatbots and automation that save real time</p>
+            </div>
+            <div class="ai-card full">
+              <div class="ai-icon">🚀</div>
+              <h5>Digital Growth Strategy</h5>
+              <p>Practical guidance to help your brand grow online, reach more people, and convert visitors into customers — backed by real marketing experience</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-quote">
+          <p>When you work with me, you work directly with me — not an agency layer. That means faster decisions, honest feedback, and real investment in your success.</p>
+          <cite>— Raj Savaliya, Freelance Digital Solutions Specialist</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY WORK WITH ME -->
+  <section class="why-section">
+    <div class="section-header reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center;margin:0 auto 0.75rem">Why Me</div>
+      <h2 class="section-title" style="text-align:center">Why Work With Me</h2>
+      <p class="section-sub" style="margin:0 auto">I'm not an agency. I'm an individual genuinely invested in your success.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon">💬</div><h4>Direct Communication</h4><p>You talk directly to me — always. No account managers, no confusion.</p></div>
+      <div class="why-card reveal reveal-d1"><div class="why-icon">🎯</div><h4>Personalized Attention</h4><p>Your project gets my full focus, not split among 20 clients at an agency.</p></div>
+      <div class="why-card reveal reveal-d2"><div class="why-icon">💰</div><h4>Genuinely Affordable</h4><p>Freelancer pricing without cutting corners — you save 40–60% vs agencies.</p></div>
+      <div class="why-card reveal reveal-d3"><div class="why-icon">⚡</div><h4>Modern Technologies</h4><p>Current tools, best practices, and up-to-date digital strategies.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🤖</div><h4>AI-Powered Edge</h4><p>Smart integrations that give your business a competitive advantage.</p></div>
+      <div class="why-card reveal reveal-d1"><div class="why-icon">🎓</div><h4>EdTech Marketing Brain</h4><p>Real-world marketing experience from managing growth at an EdTech company.</p></div>
+      <div class="why-card reveal reveal-d2"><div class="why-icon">✅</div><h4>Quality First</h4><p>I don't ship until it's right. Period.</p></div>
+      <div class="why-card reveal reveal-d3"><div class="why-icon">🤝</div><h4>Long-Term Partner</h4><p>Not just a vendor — a partner you can return to as your business grows.</p></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-section">
+    <div class="section-header reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center;margin:0 auto 0.75rem">How I Work</div>
+      <h2 class="section-title" style="text-align:center">My Process</h2>
+      <p class="section-sub" style="margin:0 auto">A simple, transparent workflow designed around your needs.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h4>Understanding Your Requirements</h4>
+        <p>Deep dive into your goals, audience, and vision to build the right foundation</p>
+      </div>
+      <div class="step reveal reveal-d1">
+        <div class="step-num">02</div>
+        <h4>Planning the Solution</h4>
+        <p>Structure the approach, tech stack, timeline, and deliverables clearly</p>
+      </div>
+      <div class="step reveal reveal-d2">
+        <div class="step-num">03</div>
+        <h4>Designing & Building</h4>
+        <p>Craft the solution with attention to detail, aesthetics, and functionality</p>
+      </div>
+      <div class="step reveal reveal-d3">
+        <div class="step-num">04</div>
+        <h4>Reviewing & Improving</h4>
+        <p>Your feedback shapes the refinement — we iterate until it's exactly right</p>
+      </div>
+      <div class="step reveal reveal-d4">
+        <div class="step-num">05</div>
+        <h4>Final Delivery</h4>
+        <p>Clean handover with all files, documentation, and continued support</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a class="nav-logo" onclick="navigate('home')">Raj<span>.</span></a>
+        <p>Freelance Digital Solutions Specialist & EdTech Marketing Manager</p>
+      </div>
+      <div class="footer-links">
+        <a onclick="navigate('home')">Home</a>
+        <a onclick="navigate('about')">About</a>
+        <a onclick="navigate('services')">Services</a>
+        <a onclick="navigate('pricing')">Pricing</a>
+        <a onclick="navigate('edtech')">EdTech</a>
+        <a onclick="navigate('contact')">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:the.rajsavaliya@gmail.com" title="Email">✉</a>
+        <a href="https://linkedin.com/in/raj-savaliya" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://wa.me/916354297641" target="_blank" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2026 <span>Raj Savaliya</span> · Freelance Digital Solutions Specialist · Made with ❤ in India
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: SERVICES ===================== -->
+<div id="page-services" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">What I Offer</div>
+      <h1>My <em>Services</em></h1>
+      <p>From concept to launch — a complete digital toolkit tailored to your goals and budget. Everything you need, nothing you don't.</p>
+    </div>
+  </div>
+
+  <!-- SERVICES GRID -->
+  <section class="services-section">
+    <div class="section-header reveal">
+      <div class="section-label">Full Service List</div>
+      <h2 class="section-title">Everything I Can Build For You</h2>
+      <p class="section-sub">Professional-grade output at freelancer pricing — choose what fits your project.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-d1">
+        <div class="service-icon">🌐</div>
+        <div class="service-title">Website Development</div>
+        <p class="service-desc">Modern, mobile-friendly sites that load fast and convert visitors into customers.</p>
+        <ul class="service-items">
+          <li>Business Websites</li>
+          <li>Landing Pages</li>
+          <li>Portfolio Websites</li>
+          <li>E-Commerce Stores</li>
+        </ul>
+        <div class="service-price-hint">💰 Starting from ₹3,999</div>
+      </div>
+      <div class="service-card featured reveal reveal-d2">
+        <div class="service-icon">✦</div>
+        <div class="service-title">Logo & Branding</div>
+        <p class="service-desc">Memorable brand identities that communicate your value and stick in minds.</p>
+        <ul class="service-items">
+          <li>Logo Design</li>
+          <li>Brand Identity Package</li>
+          <li>Visual Branding Guidelines</li>
+          <li>Brand Collaterals</li>
+        </ul>
+        <div class="service-price-hint">💰 Starting from ₹1,499</div>
+      </div>
+      <div class="service-card reveal reveal-d3">
+        <div class="service-icon">🎨</div>
+        <div class="service-title">Graphic Design</div>
+        <p class="service-desc">Eye-catching visuals that boost engagement across every platform.</p>
+        <ul class="service-items">
+          <li>Social Media Posts</li>
+          <li>Flyers & Brochures</li>
+          <li>Marketing Materials</li>
+          <li>Presentations</li>
+        </ul>
+        <div class="service-price-hint">💰 Starting from ₹499/design</div>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-icon">📱</div>
+        <div class="service-title">Android App Development</div>
+        <p class="service-desc">Custom Android applications with clean UI and real-world functionality.</p>
+        <ul class="service-items">
+          <li>Custom Android Apps</li>
+          <li>Business Applications</li>
+          <li>AI-Integrated Features</li>
+          <li>Play Store Publishing</li>
+        </ul>
+        <div class="service-price-hint">💰 Starting from ₹8,999</div>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-icon">📣</div>
+        <div class="service-title">Social Media Support</div>
+        <p class="service-desc">Consistent brand presence that builds audiences and drives engagement.</p>
+        <ul class="service-items">
+          <li>Content Planning</li>
+          <li>Creative Post Design</li>
+          <li>Brand Building Strategy</li>
+          <li>Caption & Copy Writing</li>
+        </ul>
+        <div class="service-price-hint">💰 Starting from ₹2,999/month</div>
+      </div>
+      <div class="service-card reveal reveal-d3">
+        <div class="service-icon">🤖</div>
+        <div class="service-title">AI Solutions</div>
+        <p class="service-desc">Smart automation that saves hours every week and delights your customers.</p>
+        <ul class="service-items">
+          <li>AI Chatbots</li>
+          <li>Workflow Automation</li>
+          <li>AI Integrations</li>
+          <li>Custom AI Tools</li>
+        </ul>
+        <div class="service-price-hint">💰 Starting from ₹4,999</div>
+      </div>
+      <div class="service-card reveal" style="grid-column:1/-1;max-width:100%">
+        <div style="display:flex;gap:2rem;flex-wrap:wrap;align-items:flex-start">
+          <div style="flex:1;min-width:200px">
+            <div class="service-icon">📈</div>
+            <div class="service-title">Digital Growth Consulting</div>
+            <p class="service-desc">Strategic guidance backed by real EdTech marketing experience — not just theory.</p>
+          </div>
+          <ul class="service-items" style="flex:2;min-width:260px">
+            <li>Online Presence Building</li>
+            <li>Lead Generation Strategy</li>
+            <li>Digital Marketing Planning</li>
+            <li>Student/Customer Acquisition Funnels</li>
+            <li>EdTech-specific Growth Consulting</li>
+          </ul>
+          <div style="flex:1;min-width:160px;display:flex;flex-direction:column;gap:0.75rem;justify-content:center">
+            <div class="service-price-hint" style="max-width:none">💰 Custom Pricing</div>
+            <a class="btn-primary" onclick="navigate('contact')" style="font-size:0.82rem;padding:10px 20px;text-align:center;justify-content:center">Get a Quote →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="process-section">
+    <div class="section-header reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center;margin:0 auto 0.75rem">How It Works</div>
+      <h2 class="section-title" style="text-align:center">My Delivery Process</h2>
+      <p class="section-sub" style="margin:0 auto">Simple, transparent, and designed around getting your project done right.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h4>Understanding Your Requirements</h4>
+        <p>Deep dive into your goals, audience, and vision to build the right foundation</p>
+      </div>
+      <div class="step reveal reveal-d1">
+        <div class="step-num">02</div>
+        <h4>Planning the Solution</h4>
+        <p>Structure the approach, tech stack, timeline, and deliverables clearly</p>
+      </div>
+      <div class="step reveal reveal-d2">
+        <div class="step-num">03</div>
+        <h4>Designing & Building</h4>
+        <p>Craft the solution with attention to detail, aesthetics, and functionality</p>
+      </div>
+      <div class="step reveal reveal-d3">
+        <div class="step-num">04</div>
+        <h4>Reviewing & Improving</h4>
+        <p>Your feedback shapes the refinement — we iterate until it's exactly right</p>
+      </div>
+      <div class="step reveal reveal-d4">
+        <div class="step-num">05</div>
+        <h4>Final Delivery</h4>
+        <p>Clean handover with all files, documentation, and continued support</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section style="background:var(--teal);padding:70px 6%;text-align:center">
+    <div class="section-label" style="color:rgba(255,255,255,0.7);justify-content:center;margin:0 auto 1rem">Ready to Start?</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#fff;margin-bottom:1rem;line-height:1.15">Let's Build Something Great Together</h2>
+    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 2rem;line-height:1.8">Tell me about your project and I'll get back to you within 24 hours with ideas, timeline, and pricing.</p>
+    <a class="btn-primary" onclick="navigate('contact')" style="background:#fff;color:var(--teal);box-shadow:0 8px 24px rgba(0,0,0,0.15)">Get in Touch →</a>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a class="nav-logo" onclick="navigate('home')">Raj<span>.</span></a>
+        <p>Freelance Digital Solutions Specialist & EdTech Marketing Manager</p>
+      </div>
+      <div class="footer-links">
+        <a onclick="navigate('home')">Home</a>
+        <a onclick="navigate('about')">About</a>
+        <a onclick="navigate('services')">Services</a>
+        <a onclick="navigate('pricing')">Pricing</a>
+        <a onclick="navigate('edtech')">EdTech</a>
+        <a onclick="navigate('contact')">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:the.rajsavaliya@gmail.com" title="Email">✉</a>
+        <a href="https://linkedin.com/in/raj-savaliya" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://wa.me/916354297641" target="_blank" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2026 <span>Raj Savaliya</span> · Freelance Digital Solutions Specialist · Made with ❤ in India
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: PRICING ===================== -->
+<div id="page-pricing" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">My Price Advantage</div>
+      <h1>Why My Rates Are <em>Lower Than Agencies</em></h1>
+      <p>It's not a compromise on quality — it's a structural advantage. Zero overhead. Savings passed directly to you.</p>
+    </div>
+  </div>
+
+  <!-- PRICING USP -->
+  <section class="pricing-section">
+    <div class="pricing-usp-grid">
+      <div class="pricing-usp-text reveal">
+        <div class="section-label">The Freelancer Advantage</div>
+        <h2 class="section-title">Why I'm Genuinely More Affordable</h2>
+        <p>As a freelancer, I have no office rent, no team salary overhead, no account managers, and no agency markup. Every rupee saved by my lean setup passes directly to you.</p>
+        <div class="why-cheaper-list">
+          <div class="wc-item">
+            <div class="wc-icon">🏠</div>
+            <div>
+              <h5>No Office Rent</h5>
+              <p>Agencies pay lakhs monthly for office space. I work remotely — and you don't pay for that space.</p>
+            </div>
+          </div>
+          <div class="wc-item">
+            <div class="wc-icon">👥</div>
+            <div>
+              <h5>No Middlemen or Teams</h5>
+              <p>You deal directly with me — the person actually doing the work. No account managers adding to the bill.</p>
+            </div>
+          </div>
+          <div class="wc-item">
+            <div class="wc-icon">📊</div>
+            <div>
+              <h5>No Profit Margins on Top of Work</h5>
+              <p>Agencies mark up 30–50% on every project for operational costs. I charge for my work only.</p>
+            </div>
+          </div>
+          <div class="wc-item">
+            <div class="wc-icon">⚡</div>
+            <div>
+              <h5>Faster Decisions, Less Back & Forth</h5>
+              <p>No internal layers to pass things through. Decisions are made in real time between you and me.</p>
+            </div>
+          </div>
+        </div>
+        <a class="btn-primary" onclick="navigate('contact')" style="width:fit-content">Get a Free Quote →</a>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <div>Service</div>
+            <div>Agency Rate</div>
+            <div class="col-raj">With Raj</div>
+          </div>
+          <div class="comparison-row">
+            <div class="cr-label">Business Website</div>
+            <div class="cr-agency">₹25,000+</div>
+            <div class="cr-raj">₹3,999+</div>
+          </div>
+          <div class="comparison-row">
+            <div class="cr-label">Logo Design</div>
+            <div class="cr-agency">₹8,000+</div>
+            <div class="cr-raj">₹1,499+</div>
+          </div>
+          <div class="comparison-row">
+            <div class="cr-label">Social Media/mo</div>
+            <div class="cr-agency">₹15,000+</div>
+            <div class="cr-raj">₹2,999+</div>
+          </div>
+          <div class="comparison-row">
+            <div class="cr-label">Android App</div>
+            <div class="cr-agency">₹50,000+</div>
+            <div class="cr-raj">₹8,999+</div>
+          </div>
+          <div class="comparison-row">
+            <div class="cr-label">AI Chatbot</div>
+            <div class="cr-agency">₹20,000+</div>
+            <div class="cr-raj">₹4,999+</div>
+          </div>
+          <div class="comparison-cta">
+            <p>Same quality. Fraction of the cost.</p>
+            <strong>Because you're paying for the work — not the office. 💡</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-header reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center;margin:0 auto 0.75rem">Questions</div>
+      <h2 class="section-title" style="text-align:center">Frequently Asked</h2>
+      <p class="section-sub" style="margin:0 auto">Everything you want to know before we get started.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">Why are your prices lower than agencies?<span class="faq-icon">+</span></div>
+        <div class="faq-a">As a freelancer, I have zero overhead — no office rent, no team salaries, no agency markup. All those savings go directly to you. You're paying for the actual work, not for someone else's operational costs. This means 40–60% savings with no compromise on quality.</div>
+      </div>
+      <div class="faq-item reveal reveal-d1">
+        <div class="faq-q" onclick="toggleFaq(this)">What services do you provide?<span class="faq-icon">+</span></div>
+        <div class="faq-a">I offer website development (business sites, landing pages, e-commerce), logo & branding, graphic design, Android app development, social media support, AI solutions, and digital growth consulting — backed by real EdTech marketing experience.</div>
+      </div>
+      <div class="faq-item reveal reveal-d2">
+        <div class="faq-q" onclick="toggleFaq(this)">What is your experience in EdTech?<span class="faq-icon">+</span></div>
+        <div class="faq-a">I currently work as Operations & Marketing Manager at an EdTech company, where I manage digital campaigns, student acquisition funnels, content strategy, and brand communication. If you're in education or EdTech, I bring specific, real-world expertise to your project.</div>
+      </div>
+      <div class="faq-item reveal reveal-d1">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you work with startups and small businesses?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Absolutely. I love working with early-stage startups, solo entrepreneurs, and small businesses. I understand tight budgets and timelines, and I can help you build a strong digital presence from day one without overspending.</div>
+      </div>
+      <div class="faq-item reveal reveal-d2">
+        <div class="faq-q" onclick="toggleFaq(this)">Can AI features be added to my project?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Definitely. I can integrate AI chatbots for customer support, automate repetitive workflows, add smart recommendation features to apps or websites, and build custom AI tools. These give your project a real competitive edge without major complexity or cost.</div>
+      </div>
+      <div class="faq-item reveal reveal-d3">
+        <div class="faq-q" onclick="toggleFaq(this)">How do we get started?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Simply fill out the contact form, WhatsApp me, or email the.rajsavaliya@gmail.com. Tell me about your idea or project, and I'll get back within 24 hours to discuss next steps.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a class="nav-logo" onclick="navigate('home')">Raj<span>.</span></a>
+        <p>Freelance Digital Solutions Specialist & EdTech Marketing Manager</p>
+      </div>
+      <div class="footer-links">
+        <a onclick="navigate('home')">Home</a>
+        <a onclick="navigate('about')">About</a>
+        <a onclick="navigate('services')">Services</a>
+        <a onclick="navigate('pricing')">Pricing</a>
+        <a onclick="navigate('edtech')">EdTech</a>
+        <a onclick="navigate('contact')">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:the.rajsavaliya@gmail.com" title="Email">✉</a>
+        <a href="https://linkedin.com/in/raj-savaliya" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://wa.me/916354297641" target="_blank" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2026 <span>Raj Savaliya</span> · Freelance Digital Solutions Specialist · Made with ❤ in India
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: EDTECH ===================== -->
+<div id="page-edtech" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Professional Experience</div>
+      <h1>Operations & Marketing <em>in EdTech</em></h1>
+      <p>Beyond freelancing, I work as an Operations & Marketing Manager at an EdTech company — giving me real, practical experience in what drives growth, student acquisition, and brand building in the education technology space.</p>
+    </div>
+  </div>
+
+  <!-- EDTECH DETAIL -->
+  <section class="edtech-section">
+    <div class="edtech-grid">
+      <div class="reveal">
+        <div class="edtech-label">🎓 Professional Experience</div>
+        <div class="section-label">EdTech Industry</div>
+        <h2 class="section-title">What I Do in EdTech</h2>
+        <p style="color:var(--ink2);line-height:1.85;margin-bottom:1.25rem;font-size:0.97rem">I work as an <strong>Operations & Marketing Manager</strong> at an EdTech company — giving me real, practical experience in what drives growth, student acquisition, and brand building in the education technology space.</p>
+        <p style="color:var(--ink2);line-height:1.85;margin-bottom:2rem;font-size:0.97rem">This isn't textbook knowledge. I work daily on campaigns, funnels, content strategies, and operational systems that actually move the needle for an EdTech brand. That experience directly benefits every client I work with.</p>
+        <div class="edtech-expertise">
+          <div class="ee-item">
+            <div class="ee-icon">📣</div>
+            <h5>Marketing Campaigns</h5>
+            <p>Running digital campaigns for student acquisition and brand awareness</p>
+          </div>
+          <div class="ee-item">
+            <div class="ee-icon">⚙️</div>
+            <h5>Operations Management</h5>
+            <p>Streamlining workflows and operational processes at scale</p>
+          </div>
+          <div class="ee-item">
+            <div class="ee-icon">📊</div>
+            <h5>Growth Funnels</h5>
+            <p>Building and optimizing student/customer acquisition funnels</p>
+          </div>
+          <div class="ee-item">
+            <div class="ee-icon">🎯</div>
+            <h5>Content Strategy</h5>
+            <p>Creating content that educates, engages, and converts audiences</p>
+          </div>
+        </div>
+      </div>
+      <div class="edtech-right reveal reveal-d2">
+        <div class="edtech-visual">
+          <h4 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:1.5rem">Marketing Expertise Areas</h4>
+          <div class="edtech-metric">
+            <div class="em-label">Digital Campaign Management</div>
+            <div class="em-bar-wrap"><div class="em-bar" style="width:92%"></div></div>
+            <div class="em-val">Expert</div>
+          </div>
+          <div class="edtech-metric">
+            <div class="em-label">Student Acquisition Funnels</div>
+            <div class="em-bar-wrap"><div class="em-bar" style="width:88%"></div></div>
+            <div class="em-val">Advanced</div>
+          </div>
+          <div class="edtech-metric">
+            <div class="em-label">Social Media Marketing</div>
+            <div class="em-bar-wrap"><div class="em-bar" style="width:90%"></div></div>
+            <div class="em-val">Expert</div>
+          </div>
+          <div class="edtech-metric">
+            <div class="em-label">Operations & Workflow Design</div>
+            <div class="em-bar-wrap"><div class="em-bar" style="width:85%"></div></div>
+            <div class="em-val">Advanced</div>
+          </div>
+          <div class="edtech-metric">
+            <div class="em-label">Brand Communication</div>
+            <div class="em-bar-wrap"><div class="em-bar" style="width:93%"></div></div>
+            <div class="em-val">Expert</div>
+          </div>
+          <div class="edtech-metric">
+            <div class="em-label">Content & Copy Strategy</div>
+            <div class="em-bar-wrap"><div class="em-bar" style="width:87%"></div></div>
+            <div class="em-val">Advanced</div>
+          </div>
+          <div class="edtech-cta-bar">
+            <div>
+              <p>Are you an EdTech or education brand?</p>
+              <strong>I have specific experience building for your space. →</strong>
+            </div>
+            <a class="btn-primary" onclick="navigate('contact')" style="font-size:0.82rem;padding:10px 22px;white-space:nowrap">Talk to Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY EDTECH EXPERIENCE MATTERS -->
+  <section class="why-section">
+    <div class="section-header reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center;margin:0 auto 0.75rem">The Advantage</div>
+      <h2 class="section-title" style="text-align:center">Why EdTech Experience Matters for Your Project</h2>
+      <p class="section-sub" style="margin:0 auto">Real operational marketing experience gives me insights most freelancers simply don't have.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon">🎯</div><h4>Conversion-Focused Thinking</h4><p>I understand how to build digital products that don't just look good — they convert visitors into customers.</p></div>
+      <div class="why-card reveal reveal-d1"><div class="why-icon">📊</div><h4>Data-Driven Decisions</h4><p>Working with real campaign data teaches you what actually moves the needle vs what just looks impressive.</p></div>
+      <div class="why-card reveal reveal-d2"><div class="why-icon">📣</div><h4>Brand-First Mindset</h4><p>Every design decision I make considers how it supports brand perception and audience trust.</p></div>
+      <div class="why-card reveal reveal-d3"><div class="why-icon">⚙️</div><h4>Operational Efficiency</h4><p>I build systems and workflows that save time at scale — not just one-off deliverables.</p></div>
+    </div>
+  </section>
+
+  <!-- ABOUT QUOTE SECTION -->
+  <section style="background:var(--bg2);padding:70px 6%">
+    <div style="max-width:760px;margin:0 auto;text-align:center">
+      <div class="section-label" style="justify-content:center;margin:0 auto 1rem">Working Together</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:1rem">Built for EdTech. Ready for Any Industry.</h2>
+      <p style="color:var(--ink2);line-height:1.85;margin-bottom:2rem;font-size:0.97rem">Whether you're an EdTech brand, startup, or established business, my background gives you an edge. I know what digital marketing looks like from the inside — and I build your digital presence to match.</p>
+      <a class="btn-primary" onclick="navigate('contact')">Let's Discuss Your Project →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a class="nav-logo" onclick="navigate('home')">Raj<span>.</span></a>
+        <p>Freelance Digital Solutions Specialist & EdTech Marketing Manager</p>
+      </div>
+      <div class="footer-links">
+        <a onclick="navigate('home')">Home</a>
+        <a onclick="navigate('about')">About</a>
+        <a onclick="navigate('services')">Services</a>
+        <a onclick="navigate('pricing')">Pricing</a>
+        <a onclick="navigate('edtech')">EdTech</a>
+        <a onclick="navigate('contact')">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:the.rajsavaliya@gmail.com" title="Email">✉</a>
+        <a href="https://linkedin.com/in/raj-savaliya" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://wa.me/916354297641" target="_blank" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2026 <span>Raj Savaliya</span> · Freelance Digital Solutions Specialist · Made with ❤ in India
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: CONTACT ===================== -->
+<div id="page-contact" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Let's Connect</div>
+      <h1>Let's Build Something <em>Great Together</em></h1>
+      <p>Have an idea or project in mind? I'd love to hear about it and help you bring it to life — at a price that makes sense.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM & INFO -->
+  <section class="contact-section">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div>
+          <div class="section-label">Get in Touch</div>
+          <h2 class="contact-headline">Start a Conversation</h2>
+          <p class="contact-desc">Reach out via any channel below. I respond within 24 hours and am happy to jump on a quick call to discuss your project.</p>
+        </div>
+        <a href="tel:+916354297641" class="contact-item">
+          <div class="ci-icon">📞</div>
+          <div><div class="ci-label">Phone</div><div class="ci-val">+91 63542 97641</div></div>
+        </a>
+        <a href="mailto:the.rajsavaliya@gmail.com" class="contact-item">
+          <div class="ci-icon">✉</div>
+          <div><div class="ci-label">Email</div><div class="ci-val">the.rajsavaliya@gmail.com</div></div>
+        </a>
+        <a href="https://linkedin.com/in/raj-savaliya" target="_blank" class="contact-item">
+          <div class="ci-icon">💼</div>
+          <div><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/raj-savaliya</div></div>
+        </a>
+        <a href="https://wa.me/916354297641" target="_blank" class="contact-item">
+          <div class="ci-icon">💬</div>
+          <div><div class="ci-label">WhatsApp</div><div class="ci-val">Message me directly</div></div>
+        </a>
+      </div>
+      <div class="contact-form reveal reveal-d2">
+        <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;margin-bottom:1.5rem;color:var(--ink)">Send Me a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 00000 00000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>Service Interested In</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Website Development</option>
+            <option>Logo & Branding</option>
+            <option>Graphic Design</option>
+            <option>Android App Development</option>
+            <option>Social Media Support</option>
+            <option>AI Solutions</option>
+            <option>Digital Growth Consulting</option>
+            <option>EdTech Marketing Consulting</option>
+            <option>Multiple Services</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Project Details</label>
+          <textarea placeholder="Tell me about your project, goals, and timeline..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        <p class="form-note">I typically respond within 24 hours. Your details are kept private.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY WORK WITH ME -->
+  <section class="why-section">
+    <div class="section-header reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center;margin:0 auto 0.75rem">Why Choose Me</div>
+      <h2 class="section-title" style="text-align:center">What You Can Expect</h2>
+      <p class="section-sub" style="margin:0 auto">Real commitment to your project — not just another ticket in a queue.</p>
+    </div>
+    <div class="why-grid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="why-card reveal"><div class="why-icon">⚡</div><h4>24h Response Time</h4><p>I get back to every inquiry within 24 hours — often much sooner.</p></div>
+      <div class="why-card reveal reveal-d1"><div class="why-icon">💬</div><h4>Direct Communication</h4><p>No account manager relay. You talk straight to the person doing your work.</p></div>
+      <div class="why-card reveal reveal-d2"><div class="why-icon">🔒</div><h4>Privacy First</h4><p>Your project details and business data are always kept strictly confidential.</p></div>
+      <div class="why-card reveal reveal-d3"><div class="why-icon">🤝</div><h4>No Commitment Required</h4><p>First conversation is always free — no obligation, just ideas and possibilities.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a class="nav-logo" onclick="navigate('home')">Raj<span>.</span></a>
+        <p>Freelance Digital Solutions Specialist & EdTech Marketing Manager</p>
+      </div>
+      <div class="footer-links">
+        <a onclick="navigate('home')">Home</a>
+        <a onclick="navigate('about')">About</a>
+        <a onclick="navigate('services')">Services</a>
+        <a onclick="navigate('pricing')">Pricing</a>
+        <a onclick="navigate('edtech')">EdTech</a>
+        <a onclick="navigate('contact')">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:the.rajsavaliya@gmail.com" title="Email">✉</a>
+        <a href="https://linkedin.com/in/raj-savaliya" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://wa.me/916354297641" target="_blank" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2026 <span>Raj Savaliya</span> · Freelance Digital Solutions Specialist · Made with ❤ in India
+    </div>
+  </footer>
+</div>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/916354297641?text=Hi%20Raj%2C%20I%27d%20like%20to%20discuss%20a%20project!" target="_blank" class="wa-btn" title="Chat on WhatsApp">
+  <div class="wa-tooltip">Chat on WhatsApp</div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+// ===== MULTI-PAGE NAVIGATION =====
+function navigate(page) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  // Show target page
+  const target = document.getElementById('page-' + page);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Re-run reveal animations
+    setTimeout(() => {
+      target.querySelectorAll('.reveal').forEach(el => {
+        el.classList.remove('visible');
+        observer.observe(el);
+      });
+    }, 100);
+  }
+  // Update nav active states
+  document.querySelectorAll('[data-page]').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('data-page') === page);
+  });
+}
+
+// ===== NAV SCROLL =====
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// ===== HAMBURGER =====
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+function closeMobile() { mobileMenu.classList.remove('open'); }
+
+// ===== FAQ =====
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+// ===== FORM SUBMIT =====
+function submitForm() {
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = '✓ Message Sent!';
+  btn.style.background = '#16a34a';
+  setTimeout(() => {
+    btn.textContent = 'Send Message →';
+    btn.style.background = '';
+  }, 3000);
+}
+
+// ===== SCROLL REVEAL =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
