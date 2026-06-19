@@ -1148,10 +1148,9 @@ footer::after{
             <div class="hpc-available-badge">Available for Projects</div>
           </div>
           <div class="services-list-mini">
-            <div class="slm-item"><span class="slm-icon">🌐</span>Web Dev</div>
+            <div class="slm-item"><span class="slm-icon">🌐</span>Web Development</div>
             <div class="slm-item"><span class="slm-icon">✦</span>Branding</div>
-            <div class="slm-item"><span class="slm-icon">📱</span>Android Apps</div>
-            <div class="slm-item"><span class="slm-icon">🤖</span>AI Solutions</div>
+            <div class="slm-item"><span class="slm-icon">📱</span>Social Media</div>
             <div class="slm-item"><span class="slm-icon">🎨</span>Graphic Design</div>
             <div class="slm-item"><span class="slm-icon">📈</span>Digital Growth</div>
           </div>
@@ -1692,27 +1691,27 @@ footer::after{
           </div>
           <div class="comparison-row">
             <div class="cr-label">Business Website</div>
-            <div class="cr-agency">₹25,000+</div>
+            <div class="cr-agency">₹15,000+</div>
             <div class="cr-raj">₹5,999+</div>
           </div>
           <div class="comparison-row">
             <div class="cr-label">Logo Design</div>
-            <div class="cr-agency">₹8,000+</div>
+            <div class="cr-agency">₹1,400+</div>
             <div class="cr-raj">₹299+</div>
           </div>
           <div class="comparison-row">
             <div class="cr-label">Social Media/mo</div>
-            <div class="cr-agency">₹15,000+</div>
+            <div class="cr-agency">₹10,000+</div>
             <div class="cr-raj">₹1,999+</div>
           </div>
           <div class="comparison-row">
             <div class="cr-label">Android App</div>
-            <div class="cr-agency">₹50,000+</div>
+            <div class="cr-agency">₹25,000+</div>
             <div class="cr-raj">₹9,999+</div>
           </div>
           <div class="comparison-row">
             <div class="cr-label">Graphic Design</div>
-            <div class="cr-agency">₹3,000+</div>
+            <div class="cr-agency">₹1,000+</div>
             <div class="cr-raj">₹699+</div>
           </div>
           <div class="comparison-cta">
@@ -2194,15 +2193,12 @@ function toggleFaq(el) {
   if(!isOpen) item.classList.add('open');
 }
 
-// ===== CONTACT FORM - Web3Forms Integration =====
-// Setup: Go to https://web3forms.com, enter your email (the.rajsavaliya@gmail.com)
-// and replace YOUR_ACCESS_KEY_HERE with the key they send you.
-const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+// ===== CONTACT FORM - Google Sheets Integration =====
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxw0Yiqq2P1ZK7m9SfTYrikIXX3MsHx5EXUJWRyBKraS5Z0czql6ZxnhDjDzmkt9n9F/exec';
 
 async function submitForm() {
   const btn = document.querySelector('.form-submit');
-  const form = document.getElementById('contactForm');
-  
+
   // Get values
   const name = document.getElementById('cf-name').value.trim();
   const phone = document.getElementById('cf-phone').value.trim();
@@ -2214,7 +2210,7 @@ async function submitForm() {
   if (!name) { alert('Please enter your name.'); return; }
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
   if (!message) { alert('Please describe your project.'); return; }
-  
+
   // Anti-spam honeypot check
   if (document.getElementById('cf-honeypot').value) return;
 
@@ -2224,37 +2220,31 @@ async function submitForm() {
   btn.style.opacity = '0.7';
 
   try {
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_KEY,
-        name, email, phone,
-        subject: `New Project Inquiry: ${service || 'General'}`,
-        message: `Service: ${service || 'Not specified'}\n\n${message}`,
-        from_name: 'rajsavaliya.in Contact Form',
-        replyto: email,
-      }),
+    // Use FormData + GET params method — most reliable way to send to Google Apps Script
+    const params = new URLSearchParams({
+      name, phone, email, service, message
     });
-    const data = await response.json();
-    if (data.success) {
-      btn.textContent = '✓ Message Sent!';
-      btn.style.background = '#16a34a';
-      btn.style.opacity = '1';
-      // Clear form
-      document.getElementById('cf-name').value = '';
-      document.getElementById('cf-phone').value = '';
-      document.getElementById('cf-email').value = '';
-      document.getElementById('cf-service').value = '';
-      document.getElementById('cf-message').value = '';
-      setTimeout(() => {
-        btn.textContent = 'Send Message →';
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 4000);
-    } else {
-      throw new Error('Submission failed');
-    }
+
+    const response = await fetch(APPS_SCRIPT_URL + '?' + params.toString(), {
+      method: 'GET',
+      mode: 'no-cors',
+    });
+
+    // Success
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#16a34a';
+    btn.style.opacity = '1';
+    // Clear form
+    document.getElementById('cf-name').value = '';
+    document.getElementById('cf-phone').value = '';
+    document.getElementById('cf-email').value = '';
+    document.getElementById('cf-service').value = '';
+    document.getElementById('cf-message').value = '';
+    setTimeout(() => {
+      btn.textContent = 'Send Message →';
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
   } catch(err) {
     btn.textContent = '✗ Failed — Try WhatsApp';
     btn.style.background = '#dc2626';
